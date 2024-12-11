@@ -1,0 +1,58 @@
+WASSDProgram:
+    statements+=Statement
+;
+
+Statement:
+    VariableDeclaration | Print | WhileLoop | ForLoop | Conditional | FunctionDeclaration | FunctionCall
+;
+
+VariableDeclaration:
+    var=ID 'ff' val=Expression 'ff'
+;
+
+Print:
+    'r' var=ID
+;
+
+WhileLoop:
+    'wasd' condition=Comparison statements+=Statement 'wdsa'
+;
+
+ForLoop:
+    'WASD' var=ID condition=Comparison step=INT 'ff' statements+=Statement 'WDSA'
+;
+
+Conditional:
+    'q' condition=Comparison statements+=Statement ('e' elseStmt+=Statement)? 'qe'
+;
+
+FunctionDeclaration:
+    'CC' name=ID (params=ID 'ff')* 'f' statements+=Statement 'cc'
+;
+
+FunctionCall:
+    name=ID (args=Expression 'ff')* 'f'
+;
+
+Expression:
+    left=Factor (op=Operator right=Factor)*
+;
+
+Operator:
+    'w' | 's' | 'a' | 'd' | 'Da' | 'Ad'
+;
+
+Comparison:
+    left=Factor operator=ComparisonOperator right=Factor
+;
+
+ComparisonOperator:
+    'wff' | 'sff' | 'Ff' | 'FF'
+;
+
+Factor:
+    FLOAT | INT | STRING | ID
+;
+
+INT: /[0-9]+/; 
+ID: /[wasdqerfcWASDQERFC ]*\d+/;
