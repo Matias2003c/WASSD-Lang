@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WASSD Language Overview</title>
+    <title>WASSD Language</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,8 +12,8 @@
             padding: 0;
         }
         header {
-            background: #333;
-            color: white;
+            background: #eae8d2;
+            color: rgb(76, 72, 72);
             padding: 1rem;
             text-align: center;
         }
@@ -24,62 +24,96 @@
             display: inline-block;
             padding: 0.5rem 1rem;
             margin: 0.5rem 0;
-            background: #007BFF;
+            background: #275830;
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
         .btn:hover {
-            background: #0056b3;
+            background: #7bc560;
         }
         img {
             max-width: 100%;
             height: auto;
         }
         .code-snippet {
-            background: #f4f4f4;
+            background: #d0d0d0;
             padding: 1rem;
-            border: 1px solid #ddd;
+            border: 1px solid #070707;
             border-radius: 5px;
             font-family: monospace;
+            resize: both;
+            overflow: auto;
+            width: auto;
+            max-width: 25%;
+            height: auto;
+            max-height: 296px
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>WASSD Language Overview</h1>
+        <h1>WASSD Language</h1>
     </header>
 
     <section>
         <h2>Download Files</h2>
-        <a href="program.wassd" download="program.wassd" class="btn">Download program.wassd</a>
-        <a href="WASSD.tx" download="WASSD.tx" class="btn">Download WASSD.tx</a>
+        <p>Note: Must have TextX installed properly to run</p>
         <a href="WASSD_Interpreter.py" download="WASSD_Interpreter.py" class="btn">Download WASSD_Interpreter.py</a>
+        <a href="WASSD.tx" download="WASSD.tx" class="btn">Download WASSD.tx</a>
     </section>
 
     <section>
         <h2>GitHub Repository</h2>
-        <p>Visit the <a href="https://github.com/Matias2003c/WASSD-Lang" target="_blank">GitHub Repository</a> for more details and updates.</p>
+        <p>Check out the full Reposity: <a href="https://github.com/Matias2003c/WASSD-Lang" target="_blank">GitHub Repository</a></p>
     </section>
 
     <section>
-        <h2>Code Snippets and Explanation</h2>
+        <h2>Code Snippet</h2>
         <div class="code-snippet">
 <pre>
-w1 ff 4 ff
-w2 ff 3.14 ff
+w1 ff 10 ff
+w2 ff 20 ff
+w3 ff w1 w w2 ff
 r w1
 r w2
+r w3
+wasd w1 sff 21 
+    r w1
+    w1 ff w1 w 1 ff
+wdsa
 </pre>
         </div>
-        <p>This snippet demonstrates variable declarations and output in WASSD. The first variable, <code>w1</code>, is assigned an integer value, while <code>w2</code> is assigned a floating-point value. The <code>r</code> command outputs these values to the console.</p>
+        <p>This snippet demonstrates how a code in WASSD will look like. There are variable declarations, a while loop and outputs in WASSD. </p>
     </section>
 
     <section>
-        <h2>Screenshots</h2>
-        <p>Below are screenshots showing the syntax and interpreter:</p>
+        <h2>Symbol Legend</h2>
+        <div class="code-snippet">
+    <pre>
+    ff => =
+    w => +
+    s => -
+    a => *
+    d => /
+    Da => %
+    Ad => ^
+    wff => >
+    sff => <
+    Ff => !=
+    FF => ==
+    </prev>                  
+            </div>
+        </section>
+
+    <section>
         <img src="Syntax.png" alt="Syntax Screenshot">
-        <img src="Interpreter.png" alt="Interpreter Screenshot">
+    </section>
+
+    <section>
+    <h2>Interpreter</h2>
+    <p>Interpreter was built on Python using TextX. Main interpretation process is done within this method:</p>
+        <img src="InterpretFunc.png" alt="Interpreter Screenshot">
     </section>
 </body>
 </html>
