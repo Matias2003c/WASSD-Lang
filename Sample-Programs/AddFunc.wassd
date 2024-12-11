@@ -1,0 +1,8 @@
+CC add1 a1 ff d1 ff f
+    res1 ff a1 w d1 ff
+    r res1 
+cc
+add1 5 ff 4 ff f
+w1 ff 4 ff
+w2 ff 3.14 ff
+add1 w1 ff w2 ff f

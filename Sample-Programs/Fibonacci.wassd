@@ -1,0 +1,16 @@
+e1 ff 10 ff
+w1 ff 0 ff
+w2 ff 1 ff
+w3 ff w2 ff
+c1 ff 1 ff 
+
+wasd c1 sff e1
+    r w3
+    c1 ff c1 w 1 ff
+    w1 ff w2 ff
+    w2 ff w3 ff
+    w3 ff w1 w w2 ff
+wdsa
+
+r w3
+

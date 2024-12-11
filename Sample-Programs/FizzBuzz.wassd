@@ -1,0 +1,32 @@
+ass1 ff 1 ff
+
+wasd ass1 sff 20
+    
+    s1 ff "Fizz" ff
+    s2 ff "Buzz" ff
+    s3 ff "FizzBuzz" ff
+
+    w1 ff ass1 Da 3 ff
+    w2 ff ass1 Da 5 ff
+
+    q w1 FF 0
+        q w2 FF 0
+            r s3
+        e
+            r s1
+        qe
+    e 
+        q w2 FF 0
+            r s2
+        e
+            r ass1
+        qe
+    qe
+
+    ass1 ff ass1 w 1 ff
+
+wdsa
+
+
+
+
