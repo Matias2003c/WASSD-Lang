@@ -1,3 +1,9 @@
+'''***NOTE***
+    Must insert file name that you wish to run 
+    on line 208
+    ***END NOTE***
+'''
+
 from os.path import dirname, join
 from textx import metamodel_from_file, TextXSyntaxError
 from textx.export import metamodel_export, model_export
@@ -199,7 +205,7 @@ def main(debug=False):
         wassd_mm = metamodel_from_file(join(this_folder, 'WASSD.tx'), debug=debug)
         metamodel_export(wassd_mm, join(this_folder, 'wassd_meta.dot'))
 
-        wassd_model = wassd_mm.model_from_file(join(this_folder, 'program.wassd'))
+        wassd_model = wassd_mm.model_from_file(join(this_folder, '.wassd')) #Insert file name here
         model_export(wassd_model, join(this_folder, 'wassd_model.dot'))
 
         interpreter = WASSDInterpreter()
